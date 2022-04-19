@@ -1,0 +1,655 @@
+/*Set*/
+@import "null.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+body {
+   font-family: "Roboto";
+   font-weight: 700;
+   color: #FFFFFF;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: hidden;
+}
+
+[class*="__container"] {
+   max-width: 1035px;
+   margin: 0px auto;
+   padding: 0px 15px;
+}
+
+/*/Set*/
+
+/*Header*/
+
+/*Header-Set*/
+
+.header {
+   background: url('../img/header/duotone.jpg') 0 0/100% auto no-repeat;
+   padding: 26px 0 450px 0;
+}
+
+/*общий хэдер-блок*/
+.header__row {
+   display: flex;
+   flex-wrap: wrap;
+   row-gap: 28px;
+}
+
+/*верхняя часть хэдер-блока*/
+.header__topside {
+   flex: 0 1 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+/*нижняя часть хэдер-блока*/
+.header__menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/*режим работы/телефон/кнопка хэдер-блока*/
+.header__info {
+   display: flex;
+   column-gap: 31px;
+   flex: 0 1 622px;
+   justify-content: flex-end;
+}
+
+[class*="_position"] {
+   position: relative;
+}
+
+/*/Header-Set*/
+
+/*стиль текста для режим работы/телефон хэдер-блока*/
+.header__info-item {
+   font-size: 12px;
+   line-height: 183%;
+   letter-spacing: 0.15px;
+   padding-left: 30px;
+}
+
+/*icons для режим работы/телефон хэдер-блока*/
+.header__info-hours::before {
+   content: '';
+   min-width: 24px;
+   min-height: 24px;
+   background: url("../img/header/01.svg") 0 0/24px 24px no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.header__info-phone::before {
+   content: '';
+   min-width: 24px;
+   min-height: 24px;
+   background: url("../img/header/02.svg") 0 0/24px 24px no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+/*стили для кнопки*/
+.header__info-button-item {
+   background-color: #F2726F;
+   color: #FFFFFF;
+   padding: 9px 30px;
+   font-size: 12px;
+   line-height: 200%;
+   letter-spacing: 0.15px;
+   text-transform: uppercase;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+/*менюшка*/
+.header__menu {
+   flex: 0 1 100%;
+   flex-wrap: wrap;
+   padding: 18px 40px;
+   background-color: #FFFFFF;
+   border-radius: 10px;
+   min-height: 60px;
+   padding: 18px 40px;
+}
+
+/*иконки поиска и корзины для менюшки*/
+.header__shop-search {
+   content: '';
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   margin-right: 14px;
+   background: url('../img/header/search.svg') 0 2px no-repeat;
+}
+
+.header__shop-shop {
+   content: '';
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   background: url('../img/header/shop.svg') 0 2px no-repeat;
+}
+
+/*стили для элементов менюшки*/
+.header__list-item {
+   color: #000000;
+   font-size: 14px;
+   line-height: 157%;
+   letter-spacing: 0.15px;
+}
+
+/*отступы для элементов менюшки*/
+.header__list a:not(:last-child) {
+   padding-right: 32px;
+}
+
+/*иконки для элементов менюшки*/
+.header__list-item_more::after {
+   content: '';
+   display: inline-block;
+   width: 16px;
+   height: 16px;
+   background: url('../img/header/more.svg') 6px 9px no-repeat;
+}
+
+/*Adaptive strike for header*/
+
+@media (max-width: 1050px) {
+   [class*="__container"] {
+      max-width: 970px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   [class*="__container"] {
+      max-width: 750px;
+   }
+
+   .header__logo {
+      display: flex;
+      flex: 0 1 100%;
+      justify-content: center;
+   }
+
+   .header__info-button-item {
+      padding: 7px 25px;
+      font-size: 11px;
+      border-radius: 12px;
+   }
+
+   .header__topside {
+      row-gap: 20px;
+   }
+
+   .header__row {
+      row-gap: 15px;
+   }
+
+   .header__info-item {
+      font-size: 11px;
+      font-weight: 500;
+   }
+
+   .header__info {
+      flex: 0 1 100%;
+      justify-content: space-between;
+   }
+}
+
+@media (max-width: 767.98px) {
+   [class*="__container"] {
+      max-width: none;
+   }
+
+   .header__menu {
+      padding: 14px 30px;
+      min-height: 50px;
+      flex-wrap: wrap;
+   }
+
+   .header__menu {
+      row-gap: 10px;
+   }
+
+   .header__shop {
+      padding-left: 10px;
+   }
+
+   .header__list {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .header {
+      background: url('../img/header/duotone.jpg') 0 0/auto no-repeat;
+   }
+}
+
+@media (max-width: 651.98px) {
+
+   .header__menu {
+      justify-content: center;
+   }
+
+}
+
+@media (max-width: 451.98px) {
+   .header__list {
+      flex: 0 1 250px;
+   }
+}
+
+@media (max-width: 359.98px) {
+
+   .header__info-button-item {
+      padding: 27px 7px;
+      font-size: 10px;
+      border-radius: 12px;
+   }
+}
+
+/*/Adaptive strike for header*/
+
+/*/Header*/
+
+
+/*Muzzle*/
+
+.muzzle_set {
+   display: flex;
+   padding: 80px 0;
+   position: relative;
+   margin-bottom: 60px;
+}
+
+.muzzle__container {
+   flex: 0 1 1020px;
+   padding: 100px 87px;
+   background: #5D62B5;
+   min-height: 700px;
+   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   border-radius: 40px;
+   position: relative;
+}
+
+.muzzle__container::after {
+   content: '';
+   background: url('../img/main/muzzle/circles.svg') 0 0 no-repeat;
+   position: absolute;
+   top: -16%;
+   left: 88%;
+   width: 201px;
+   height: 317px;
+}
+
+.muzzle__container::before {
+   content: '';
+   background: url("../img/main/muzzle/Blob-2.png") 0 0 no-repeat;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 36%;
+   left: -2%;
+}
+
+.muzzle__logo {
+   font-size: 12px;
+   line-height: 200%;
+   letter-spacing: 2.5px;
+   text-transform: uppercase;
+   color: #F5F5F5;
+   padding-left: 8px;
+   position: relative;
+   padding-left: 34px;
+   margin-bottom: 33px;
+}
+
+.muzzle__logo::before {
+   content: '';
+   position: absolute;
+   background: url("../img/main/muzzle/logo.svg") 0 -2px no-repeat;
+   width: 18px;
+   height: 19px;
+   top: 0;
+   left: 0;
+}
+
+.muzzle__title-item {
+   font-weight: 900;
+   font-size: 36px;
+   line-height: 117%;
+   max-width: 583px;
+   margin-bottom: 36px;
+}
+
+.muzzle__text {
+   position: relative;
+}
+
+.muzzle__text-item {
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   letter-spacing: 0.15px;
+   color: #F5F5F5;
+}
+
+.muzzle__img {
+   position: relative;
+}
+
+.muzzle__body {
+   position: relative;
+}
+
+.muzzle__body::after {
+   content: '';
+   position: absolute;
+   background: url("../img/main/muzzle/dog-muzzle.png") 0 0 no-repeat;
+   width: 876px;
+   height: 463px;
+   top: 120%;
+   left: 0;
+   border-radius: 40px;
+}
+
+/*Adaptive-Strike for Muzzle*/
+
+@media (max-width: 1050px) {
+   .muzzle__body::after {
+      content: '';
+      position: absolute;
+      background: url("../img/main/muzzle/dog-muzzle.png") 0 0/816px 403px no-repeat;
+      width: 816px;
+      height: 403px;
+      top: 120%;
+      left: -2%;
+      border-radius: 40px;
+   }
+
+   .muzzle__container {
+      padding: 70px 87px;
+   }
+
+   .muzzle__container::before {
+      top: 34%;
+      left: -4%;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .muzzle__body::after {
+      background: url("../img/main/muzzle/dog-muzzle.png") 0 0/626px 362px no-repeat;
+      width: 626px;
+      height: 363px;
+      top: 120%;
+      left: -5%;
+   }
+
+   .muzzle__container::before {
+      top: 37%;
+      left: -4%;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .muzzle__container::after {
+      display: none;
+   }
+
+   .muzzle__title-item {
+      font-weight: 700;
+      font-size: 33px;
+      margin-bottom: 32px;
+   }
+
+   .muzzle__text-item {
+      font-weight: 400;
+      font-size: 15px;
+   }
+}
+
+@media (max-width: 720px) {
+   .muzzle__body::after {
+      background: url("../img/main/muzzle/dog-muzzle.png") 0 0/500px 253px no-repeat;
+      width: 500px;
+      height: 253px;
+      top: 132%;
+      left: 5%;
+   }
+
+   .muzzle__container {
+      min-height: 600px;
+      padding: 50px 67px;
+   }
+
+   .muzzle__container::before {
+      width: 100%;
+      height: 100%;
+      background: url("../img/main/muzzle/Blob-2.png") 0 0/500px 340px no-repeat;
+      top: 57%;
+      left: 4%;
+   }
+
+}
+
+@media (max-width: 620px) {
+   .muzzle__container::before {
+      display: none;
+   }
+
+   .muzzle__body::after {
+      display: none;
+   }
+
+   .muzzle__container {
+      padding: 30px 17px;
+   }
+
+   .muzzle__text::after {
+      content: '';
+      display: inline-block;
+      background: url("../img/main/muzzle/dog-muzzle.png") 0 0/500px 250px no-repeat;
+      min-width: 500px;
+      min-height: 250px;
+      transform: translate(2%, 10%);
+   }
+}
+
+@media (max-width: 532px) {
+   .muzzle__text::after {
+      display: none;
+   }
+
+   .muzzle__container {
+      padding: 100px 17px;
+   }
+
+   .muzzle__title-item {
+      font-weight: 900;
+      font-size: 36px;
+      margin-bottom: 32px;
+   }
+
+   .muzzle__text-item {
+      font-weight: 400;
+      font-size: 17px;
+   }
+
+   .muzzle__logo {
+      font-size: 20px;
+   }
+
+   .muzzle__logo::before {
+      background: url("../img/main/muzzle/logo.svg") 0 5px/28px 29px no-repeat;
+      width: 28px;
+      height: 29px;
+   }
+}
+
+/*/Adaptive-Strike for Muzzle*/
+/*/Muzzle*/
+
+/*Tennis*/
+
+.tennis_set {
+   background: #29C3BE;
+   min-height: 500px;
+   position: relative;
+   margin-bottom: 60px;
+}
+
+.tennis__body {
+   display: flex;
+   justify-content: flex-end;
+   padding-top: 114px;
+   position: relative;
+}
+
+.tennis_set::before {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: url("../img/main/dogntennis/blob-3.png") 0 0 no-repeat;
+   z-index: 2;
+}
+
+.tennis_set::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: url("../img/main/dogntennis/circles.svg") 0 0 no-repeat;
+   top: 24%;
+   left: 0;
+}
+
+/*Стили для собачки*/
+.tennis__body::before {
+   content: '';
+   position: absolute;
+   min-width: 744px;
+   min-height: 490px;
+   background: url("../img/main/dogntennis/dog.png") 0 0/744px 490px no-repeat;
+   top: 3%;
+   left: -46%;
+   z-index: 4;
+}
+
+.tennis__textarea {
+   flex: 0 1 425px;
+   padding: 0 0 0 15px;
+   z-index: 8;
+   position: relative;
+}
+
+.tennis__textarea-title {
+   margin-bottom: 45px;
+}
+
+.tennis__textarea-title-item {
+   font-weight: 900;
+   font-size: 36px;
+   line-height: 117%;
+}
+
+.tennis__textarea-button-item {
+   background-color: #F2726F;
+   color: #FFFFFF;
+   padding: 9px 30px;
+   font-size: 12px;
+   line-height: 200%;
+   letter-spacing: 0.15px;
+   text-transform: uppercase;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.tennis__body::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: url("../img/main/dogntennis/line.svg") 0 0 no-repeat;
+   top: 0;
+   left: 51%;
+
+}
+
+.tennis__textarea::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: url("../img/main/dogntennis/ball.png") 0 0 no-repeat;
+   top: 0;
+   left: 105%;
+}
+
+/*Adaptive-Strike for Tennis*/
+
+@media (max-width: 1050px) {
+   .tennis__body::before {
+      min-width: 644px;
+      min-height: 400px;
+      background: url("../img/main/dogntennis/dog.png") 0 0/644px 400px no-repeat;
+      top: 31%;
+      left: -6%;
+      z-index: 4;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .tennis_set::before {
+      display: none;
+   }
+
+   .tennis_set::after {
+      display: none;
+   }
+
+   .tennis__body {
+      justify-content: center;
+      padding-top: 34px;
+   }
+
+   .tennis__body::before {
+      min-width: 244px;
+      min-height: 200px;
+      background: url("../img/main/dogntennis/dog.png") 0 0/244px 200px no-repeat;
+      top: 121%;
+      left: 26%;
+   }
+
+   .tennis__textarea::after {
+      display: none;
+   }
+}
+
+@media (max-width: 610px) {
+   .tennis__body::before {
+      display: none;
+   }
+
+   .tennis__body {
+      justify-content: center;
+      padding-top: 30%;
+   }
+
+   .tennis__textarea-button-item {
+      min-width: 100%;
+      padding: 12px 30px;
+      font-size: 14px;
+   }
+}
+
+/*/Adaptive-Strike for Tennis*/
+/*/Tennis*/
